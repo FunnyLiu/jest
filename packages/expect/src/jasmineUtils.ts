@@ -62,6 +62,7 @@ function asymmetricMatch(a: any, b: any) {
 
 // Equality function lovingly adapted from isEqual in
 //   [Underscore](http://underscorejs.org)
+// 判断是否相等，基于Underscore的isEqual
 function eq(
   a: any,
   b: any,

@@ -550,7 +550,7 @@ const matchers: MatchersObject = {
 
     return {message, pass};
   },
-
+  // 校验方案toEqual
   toEqual(this: MatcherState, received: unknown, expected: unknown) {
     const matcherName = 'toEqual';
     const options: MatcherHintOptions = {
