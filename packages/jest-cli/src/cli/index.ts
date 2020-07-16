@@ -49,6 +49,7 @@ export const buildArgv = (maybeArgv?: Array<string>): Config.Argv => {
 
   const rawArgv: Config.Argv | Array<string> =
     maybeArgv || process.argv.slice(2);
+  // 基于yargs初始化cli入口
   const argv: Config.Argv = yargs(rawArgv)
     .usage(args.usage)
     .version(version)
