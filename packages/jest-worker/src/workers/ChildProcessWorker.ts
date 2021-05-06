@@ -63,6 +63,7 @@ export default class ChildProcessWorker implements WorkerInterface {
 
   initialize() {
     const forceColor = supportsColor.stdout ? {FORCE_COLOR: '1'} : {};
+    //基于childProcess开启多进程的工作
     const child = childProcess.fork(require.resolve('./processChild'), [], {
       cwd: process.cwd(),
       env: {

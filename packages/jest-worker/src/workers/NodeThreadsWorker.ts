@@ -46,6 +46,7 @@ export default class ExperimentalWorker implements WorkerInterface {
   }
 
   initialize() {
+    //基于worker_threads开启多线程工作
     this._worker = new Worker(path.resolve(__dirname, './threadChild.js'), {
       eval: false,
       stderr: true,
